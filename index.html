@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overlay Image Editor</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="app">
+            <p class="app-title">Overlay Image Editor</p>
+
+            <canvas id="canvas"></canvas>
+
+            <div class="canvas-controls-row">
+                <div class="d-flex-container" style="margin-top: 5px;">
+                    <label id="toggleThemeButtonLabel" class="canvas-control-label">Theme:</label>
+                    <button id="toggleThemeButton" aria-label="Toggle Theme"></button>
+                </div>
+                <label id="canvasDimensionsLabel"></label>
+            </div>
+
+            <div class="canvas-controls-row" style="margin-top: 8px;">
+                <div class="d-flex-container">
+                    <label id="backgroundImgSelectButtonLabel" class="canvas-control-label">Background:</label>
+                    <select id="backgroundImgSelect">
+                        <option value="shadow_spotlight.png">Shadow/Spotlight</option>
+                        <option value="shadow_spotlight_small.png">Shadow/Spotlight - Small</option>
+                        <option value="blank.png">Blank</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="canvas-controls-row" style="margin-top: 8px;">
+                <div class="d-flex-container">
+                    <label for="overlayImgInput" id="overlayImgInputLabel" class="canvas-control-button">Upload Overlay Image</label>
+                    <input type="file" id="overlayImgInput" style="display: none;" accept="image/png">
+                    <label id="overlayImgLabel" class="canvas-control-label"></label>
+                </div>
+            </div>
+
+            <div class="canvas-controls-row" style="margin-top: 8px;">
+                <button id="saveButton" class="canvas-control-button">Save Image</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
